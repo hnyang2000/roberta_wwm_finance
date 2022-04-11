@@ -1,0 +1,1080 @@
+03/21/2022 12:00:28 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 3distributed training: False, 16-bits training: False
+03/21/2022 12:00:28 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=3,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.EPOCH,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=True,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=-1,
+log_level=10,
+log_level_replica=10,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/roberta-wwm-clue/runs/Mar21_12-00-28_container-9f98118b3c-1916a229,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.EPOCH,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=5.0,
+max_steps=-1,
+metric_for_best_model=loss,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=32.0,
+output_dir=/root/autodl-tmp/roberta-wwm-clue,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=96,
+per_device_train_batch_size=20,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=/root/roberta-wwm-weibo-best,
+run_name=/root/autodl-tmp/roberta-wwm-clue,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=25,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.1,
+warmup_steps=0,
+weight_decay=0.01,
+xpu_backend=None,
+)
+03/21/2022 12:00:28 - DEBUG - datasets.load - Checking txt/txt.py for additional imports.
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140306140465856 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Lock 140306140465856 acquired on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Attempting to release lock 140306140465856 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Lock 140306140465856 released on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 12:00:28 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/datasets/txt/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/txt.py
+03/21/2022 12:00:28 - WARNING - datasets.builder - Using custom data configuration default-0eb06481602fdfd8
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140306140970144 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Lock 140306140970144 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+03/21/2022 12:00:28 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Attempting to release lock 140306140970144 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Lock 140306140970144 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140306140465568 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Lock 140306140465568 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - WARNING - datasets.builder - Reusing dataset text_ner (/root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15)
+03/21/2022 12:00:28 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Attempting to release lock 140306140465568 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - DEBUG - datasets.utils.filelock - Lock 140306140465568 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-0eb06481602fdfd8_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 12:00:28 - DEBUG - datasets.builder - Constructing Dataset for split train, validation, test, from /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 12:00:52 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-95f8ea1f960087fa.arrow
+03/21/2022 12:00:53 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-786f42a928bcb52d.arrow
+03/21/2022 12:00:53 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 1548308 bytes /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/tmpdcm92m98.
+03/21/2022 12:02:34 - WARNING - datasets.load - Using the latest cached version of the module from /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval/c8563af43bdce095d0f9e8b8b79c9c96d5ea5499b3bf66f90301c9cb82910f11 (last modified on Mon Mar 14 17:46:27 2022) since it couldn't be found locally at seqeval, or remotely on the Hugging Face Hub.
+03/21/2022 12:05:21 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424933840 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:05:21 - DEBUG - datasets.utils.filelock - Lock 140313424933840 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:05:21 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592600 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:05:21 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:05:23 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:05:23 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424933840 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:05:23 - DEBUG - datasets.utils.filelock - Lock 140313424933840 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:07:44 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313564417520 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:07:44 - DEBUG - datasets.utils.filelock - Lock 140313564417520 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:07:44 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 591968 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:07:44 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:07:46 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:07:46 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313564417520 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:07:46 - DEBUG - datasets.utils.filelock - Lock 140313564417520 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:10:07 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424698384 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:10:07 - DEBUG - datasets.utils.filelock - Lock 140313424698384 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:10:07 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 593032 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:10:07 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:10:09 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:10:09 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424698384 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:10:09 - DEBUG - datasets.utils.filelock - Lock 140313424698384 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:12:32 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140305988143232 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:12:32 - DEBUG - datasets.utils.filelock - Lock 140305988143232 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:12:32 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592508 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:12:32 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:12:33 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:12:33 - DEBUG - datasets.utils.filelock - Attempting to release lock 140305988143232 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:12:33 - DEBUG - datasets.utils.filelock - Lock 140305988143232 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:14:56 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313414831312 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:14:56 - DEBUG - datasets.utils.filelock - Lock 140313414831312 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:14:56 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592144 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:14:56 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:14:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:14:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313414831312 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:14:57 - DEBUG - datasets.utils.filelock - Lock 140313414831312 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:17:20 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313564581504 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:17:20 - DEBUG - datasets.utils.filelock - Lock 140313564581504 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:17:20 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 593512 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:17:20 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:17:21 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:17:21 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313564581504 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:17:21 - DEBUG - datasets.utils.filelock - Lock 140313564581504 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:19:44 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313564580928 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:19:44 - DEBUG - datasets.utils.filelock - Lock 140313564580928 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:19:44 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592332 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:19:44 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:19:46 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:19:46 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313564580928 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:19:46 - DEBUG - datasets.utils.filelock - Lock 140313564580928 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:22:09 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313414830976 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:22:09 - DEBUG - datasets.utils.filelock - Lock 140313414830976 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:22:09 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 591672 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:22:09 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:22:10 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:22:10 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313414830976 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:22:10 - DEBUG - datasets.utils.filelock - Lock 140313414830976 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:24:33 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140314092721488 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:24:33 - DEBUG - datasets.utils.filelock - Lock 140314092721488 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:24:33 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592336 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:24:33 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:24:34 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:24:34 - DEBUG - datasets.utils.filelock - Attempting to release lock 140314092721488 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:24:34 - DEBUG - datasets.utils.filelock - Lock 140314092721488 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:26:56 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313564417616 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:26:56 - DEBUG - datasets.utils.filelock - Lock 140313564417616 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:26:56 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592672 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:26:56 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:26:58 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:26:58 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313564417616 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:26:58 - DEBUG - datasets.utils.filelock - Lock 140313564417616 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:29:19 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313425029392 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:29:19 - DEBUG - datasets.utils.filelock - Lock 140313425029392 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:29:19 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592980 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:29:19 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:29:20 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:29:20 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313425029392 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:29:20 - DEBUG - datasets.utils.filelock - Lock 140313425029392 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:31:43 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140305988141888 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:31:43 - DEBUG - datasets.utils.filelock - Lock 140305988141888 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:31:43 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592360 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:31:43 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:31:45 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:31:45 - DEBUG - datasets.utils.filelock - Attempting to release lock 140305988141888 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:31:45 - DEBUG - datasets.utils.filelock - Lock 140305988141888 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:34:06 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140306140967936 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:34:06 - DEBUG - datasets.utils.filelock - Lock 140306140967936 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:34:06 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592544 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:34:06 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:34:08 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:34:08 - DEBUG - datasets.utils.filelock - Attempting to release lock 140306140967936 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:34:08 - DEBUG - datasets.utils.filelock - Lock 140306140967936 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:36:31 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313564417520 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:36:31 - DEBUG - datasets.utils.filelock - Lock 140313564417520 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:36:31 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592524 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:36:31 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:36:32 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:36:32 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313564417520 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:36:32 - DEBUG - datasets.utils.filelock - Lock 140313564417520 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:38:52 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313408337472 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:38:52 - DEBUG - datasets.utils.filelock - Lock 140313408337472 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:38:52 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592912 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:38:52 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:38:53 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:38:53 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313408337472 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:38:53 - DEBUG - datasets.utils.filelock - Lock 140313408337472 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:41:16 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140308360448320 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:41:16 - DEBUG - datasets.utils.filelock - Lock 140308360448320 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:41:16 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592612 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:41:16 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:41:17 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:41:17 - DEBUG - datasets.utils.filelock - Attempting to release lock 140308360448320 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:41:17 - DEBUG - datasets.utils.filelock - Lock 140308360448320 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:43:40 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424394560 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:43:40 - DEBUG - datasets.utils.filelock - Lock 140313424394560 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:43:40 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592668 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:43:40 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:43:41 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:43:41 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424394560 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:43:41 - DEBUG - datasets.utils.filelock - Lock 140313424394560 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:46:01 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140305988141888 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:46:01 - DEBUG - datasets.utils.filelock - Lock 140305988141888 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:46:01 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592076 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:46:01 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:46:02 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:46:02 - DEBUG - datasets.utils.filelock - Attempting to release lock 140305988141888 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:46:02 - DEBUG - datasets.utils.filelock - Lock 140305988141888 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:48:25 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313565211040 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:48:25 - DEBUG - datasets.utils.filelock - Lock 140313565211040 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:48:25 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592248 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:48:25 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:48:26 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:48:26 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313565211040 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:48:26 - DEBUG - datasets.utils.filelock - Lock 140313565211040 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:50:49 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424612848 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:50:49 - DEBUG - datasets.utils.filelock - Lock 140313424612848 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:50:49 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592968 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:50:49 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:50:50 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:50:50 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424612848 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:50:50 - DEBUG - datasets.utils.filelock - Lock 140313424612848 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:53:13 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140314092721488 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:53:13 - DEBUG - datasets.utils.filelock - Lock 140314092721488 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:53:13 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592332 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:53:13 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:53:15 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:53:15 - DEBUG - datasets.utils.filelock - Attempting to release lock 140314092721488 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:53:15 - DEBUG - datasets.utils.filelock - Lock 140314092721488 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:55:37 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424612800 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:55:37 - DEBUG - datasets.utils.filelock - Lock 140313424612800 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:55:37 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592196 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:55:37 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:55:39 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:55:39 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424612800 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:55:39 - DEBUG - datasets.utils.filelock - Lock 140313424612800 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:58:00 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313423644512 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:58:00 - DEBUG - datasets.utils.filelock - Lock 140313423644512 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:58:00 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592852 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 12:58:00 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 12:58:02 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 12:58:02 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313423644512 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 12:58:02 - DEBUG - datasets.utils.filelock - Lock 140313423644512 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:00:24 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140314092721488 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:00:24 - DEBUG - datasets.utils.filelock - Lock 140314092721488 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:00:24 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592300 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:00:24 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:00:26 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:00:26 - DEBUG - datasets.utils.filelock - Attempting to release lock 140314092721488 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:00:26 - DEBUG - datasets.utils.filelock - Lock 140314092721488 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:02:48 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140307822235600 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:02:48 - DEBUG - datasets.utils.filelock - Lock 140307822235600 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:02:48 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592292 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:02:48 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:02:49 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:02:49 - DEBUG - datasets.utils.filelock - Attempting to release lock 140307822235600 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:02:49 - DEBUG - datasets.utils.filelock - Lock 140307822235600 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:05:12 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140305988143088 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:05:12 - DEBUG - datasets.utils.filelock - Lock 140305988143088 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:05:12 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592948 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:05:12 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:05:13 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:05:13 - DEBUG - datasets.utils.filelock - Attempting to release lock 140305988143088 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:05:13 - DEBUG - datasets.utils.filelock - Lock 140305988143088 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:07:35 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313425029392 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:07:35 - DEBUG - datasets.utils.filelock - Lock 140313425029392 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:07:35 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592596 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:07:35 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:07:36 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:07:36 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313425029392 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:07:36 - DEBUG - datasets.utils.filelock - Lock 140313425029392 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:09:58 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140307821968160 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:09:58 - DEBUG - datasets.utils.filelock - Lock 140307821968160 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:09:58 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592424 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:09:58 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:09:59 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:09:59 - DEBUG - datasets.utils.filelock - Attempting to release lock 140307821968160 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:09:59 - DEBUG - datasets.utils.filelock - Lock 140307821968160 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:12:22 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424394224 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:12:22 - DEBUG - datasets.utils.filelock - Lock 140313424394224 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:12:22 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592368 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:12:22 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:12:23 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:12:23 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424394224 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:12:23 - DEBUG - datasets.utils.filelock - Lock 140313424394224 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:14:47 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424453888 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:14:47 - DEBUG - datasets.utils.filelock - Lock 140313424453888 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:14:47 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592496 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:14:47 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:14:48 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:14:48 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424453888 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:14:48 - DEBUG - datasets.utils.filelock - Lock 140313424453888 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:17:11 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313424395280 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:17:11 - DEBUG - datasets.utils.filelock - Lock 140313424395280 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:17:11 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592316 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:17:11 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:17:12 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:17:12 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313424395280 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:17:12 - DEBUG - datasets.utils.filelock - Lock 140313424395280 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:35 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140308352607088 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:35 - DEBUG - datasets.utils.filelock - Lock 140308352607088 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:35 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 592424 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:19:35 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:19:37 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:19:37 - DEBUG - datasets.utils.filelock - Attempting to release lock 140308352607088 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:37 - DEBUG - datasets.utils.filelock - Lock 140308352607088 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:49 - INFO - __main__ - *** Evaluate ***
+03/21/2022 13:19:52 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140313414830544 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:52 - DEBUG - datasets.utils.filelock - Lock 140313414830544 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:52 - DEBUG - datasets.arrow_writer - Done writing 1344 examples in 593024 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:19:52 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:19:53 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:19:53 - DEBUG - datasets.utils.filelock - Attempting to release lock 140313414830544 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:19:53 - DEBUG - datasets.utils.filelock - Lock 140313414830544 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:21:05 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 3distributed training: False, 16-bits training: False
+03/21/2022 13:21:05 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=3,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.EPOCH,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=True,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=-1,
+log_level=10,
+log_level_replica=10,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/roberta-wwm-finance/runs/Mar21_13-21-04_container-9f98118b3c-1916a229,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.EPOCH,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=5.0,
+max_steps=-1,
+metric_for_best_model=loss,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=32.0,
+output_dir=/root/autodl-tmp/roberta-wwm-finance,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=96,
+per_device_train_batch_size=20,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=/root/roberta-wwm-clue-best,
+run_name=/root/autodl-tmp/roberta-wwm-finance,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=25,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.1,
+warmup_steps=0,
+weight_decay=0.01,
+xpu_backend=None,
+)
+03/21/2022 13:21:05 - DEBUG - datasets.load - Checking txt/txt.py for additional imports.
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614528945024 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Lock 139614528945024 acquired on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614528945024 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Lock 139614528945024 released on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 13:21:05 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/datasets/txt/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/txt.py
+03/21/2022 13:21:05 - WARNING - datasets.builder - Using custom data configuration default-ce46939c35b020a5
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614529439680 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Lock 139614529439680 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614529439680 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Lock 139614529439680 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614528944400 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:05 - DEBUG - datasets.utils.filelock - Lock 139614528944400 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:05 - INFO - datasets.builder - Generating dataset text_ner (/root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15)
+03/21/2022 13:21:05 - INFO - datasets.builder - Dataset not on Hf google storage. Downloading and preparing it from source
+03/21/2022 13:21:05 - INFO - datasets.utils.download_manager - Downloading took 0.0 min
+03/21/2022 13:21:05 - INFO - datasets.utils.download_manager - Checksum Computation took 0.0 min
+03/21/2022 13:21:05 - INFO - datasets.utils.info_utils - Unable to verify checksums.
+03/21/2022 13:21:05 - INFO - datasets.builder - Generating split train
+03/21/2022 13:21:09 - DEBUG - datasets.arrow_writer - Done writing 8850 examples in 6521069 bytes /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete/text_ner-train.arrow.
+03/21/2022 13:21:09 - INFO - datasets.builder - Generating split validation
+03/21/2022 13:21:09 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 790617 bytes /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete/text_ner-validation.arrow.
+03/21/2022 13:21:09 - INFO - datasets.builder - Generating split test
+03/21/2022 13:21:10 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 784114 bytes /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete/text_ner-test.arrow.
+03/21/2022 13:21:10 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/21/2022 13:21:10 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614529302288 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 13:21:10 - DEBUG - datasets.utils.filelock - Lock 139614529302288 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 13:21:10 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614529302288 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 13:21:10 - DEBUG - datasets.utils.filelock - Lock 139614529302288 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 13:21:10 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614528944400 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:10 - DEBUG - datasets.utils.filelock - Lock 139614528944400 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-ce46939c35b020a5_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 13:21:10 - DEBUG - datasets.builder - Constructing Dataset for split train, validation, test, from /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 13:21:32 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-a237f072b0ed5eb1.arrow
+03/21/2022 13:21:34 - DEBUG - datasets.arrow_writer - Done writing 8850 examples in 13091481 bytes /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/tmp4ilvb641.
+03/21/2022 13:21:34 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-4d3ca23591d4b270.arrow
+03/21/2022 13:21:34 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 1588992 bytes /root/.cache/huggingface/datasets/text_ner/default-ce46939c35b020a5/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/tmpg5p62hi5.
+03/21/2022 13:21:36 - DEBUG - datasets.load - Checking /root/.cache/huggingface/datasets/downloads/3ea48770c83b8d5b34169dcfd6c761e42278eefbeada4d7009c99da080f17c12.63490f48f0656d09ada2c86daed79587694915df82dd311e407b049ad2f525eb.py for additional imports.
+03/21/2022 13:21:36 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614400581296 on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 13:21:36 - DEBUG - datasets.utils.filelock - Lock 139614400581296 acquired on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 13:21:36 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614400581296 on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 13:21:36 - DEBUG - datasets.utils.filelock - Lock 139614400581296 released on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 13:21:36 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval/c8563af43bdce095d0f9e8b8b79c9c96d5ea5499b3bf66f90301c9cb82910f11/seqeval.py
+03/21/2022 13:24:55 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621272042272 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:24:55 - DEBUG - datasets.utils.filelock - Lock 139621272042272 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:24:55 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602289 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:24:55 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:24:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:24:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621272042272 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:24:57 - DEBUG - datasets.utils.filelock - Lock 139621272042272 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:27:56 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621809853920 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:27:56 - DEBUG - datasets.utils.filelock - Lock 139621809853920 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:27:56 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 604692 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:27:56 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:27:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:27:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621809853920 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:27:57 - DEBUG - datasets.utils.filelock - Lock 139621809853920 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:30:56 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810524064 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:30:56 - DEBUG - datasets.utils.filelock - Lock 139621810524064 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:30:56 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 604110 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:30:56 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:30:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:30:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810524064 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:30:57 - DEBUG - datasets.utils.filelock - Lock 139621810524064 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:33:55 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621290731696 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:33:55 - DEBUG - datasets.utils.filelock - Lock 139621290731696 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:33:55 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603412 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:33:55 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:33:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:33:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621290731696 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:33:57 - DEBUG - datasets.utils.filelock - Lock 139621290731696 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:36:56 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621808979248 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:36:56 - DEBUG - datasets.utils.filelock - Lock 139621808979248 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:36:56 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 604034 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:36:56 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:36:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:36:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621808979248 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:36:57 - DEBUG - datasets.utils.filelock - Lock 139621808979248 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:39:55 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810523968 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:39:55 - DEBUG - datasets.utils.filelock - Lock 139621810523968 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:39:55 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603452 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:39:55 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:39:56 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:39:56 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810523968 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:39:56 - DEBUG - datasets.utils.filelock - Lock 139621810523968 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:42:53 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139613941689216 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:42:53 - DEBUG - datasets.utils.filelock - Lock 139613941689216 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:42:53 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602294 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:42:53 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:42:54 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:42:54 - DEBUG - datasets.utils.filelock - Attempting to release lock 139613941689216 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:42:54 - DEBUG - datasets.utils.filelock - Lock 139613941689216 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:45:50 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614400578128 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:45:50 - DEBUG - datasets.utils.filelock - Lock 139614400578128 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:45:50 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602926 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:45:50 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:45:51 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:45:51 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614400578128 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:45:51 - DEBUG - datasets.utils.filelock - Lock 139614400578128 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:48:50 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621809784816 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:48:50 - DEBUG - datasets.utils.filelock - Lock 139621809784816 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:48:50 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603044 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:48:50 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:48:52 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:48:52 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621809784816 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:48:52 - DEBUG - datasets.utils.filelock - Lock 139621809784816 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:51:50 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621809784864 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:51:50 - DEBUG - datasets.utils.filelock - Lock 139621809784864 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:51:50 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602696 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:51:50 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:51:51 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:51:51 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621809784864 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:51:51 - DEBUG - datasets.utils.filelock - Lock 139621809784864 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:54:50 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614400578128 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:54:50 - DEBUG - datasets.utils.filelock - Lock 139614400578128 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:54:50 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603156 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:54:50 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:54:51 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:54:51 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614400578128 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:54:51 - DEBUG - datasets.utils.filelock - Lock 139614400578128 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:57:48 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621290731120 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:57:48 - DEBUG - datasets.utils.filelock - Lock 139621290731120 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:57:48 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603098 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 13:57:49 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 13:57:50 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 13:57:50 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621290731120 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 13:57:50 - DEBUG - datasets.utils.filelock - Lock 139621290731120 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:00:49 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621809784816 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:00:49 - DEBUG - datasets.utils.filelock - Lock 139621809784816 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:00:49 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603220 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:00:49 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:00:50 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:00:50 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621809784816 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:00:50 - DEBUG - datasets.utils.filelock - Lock 139621809784816 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:03:50 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621290731552 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:03:50 - DEBUG - datasets.utils.filelock - Lock 139621290731552 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:03:50 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602310 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:03:50 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:03:51 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:03:51 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621290731552 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:03:51 - DEBUG - datasets.utils.filelock - Lock 139621290731552 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:06:52 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810208528 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:06:52 - DEBUG - datasets.utils.filelock - Lock 139621810208528 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:06:52 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602678 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:06:52 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:06:53 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:06:53 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810208528 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:06:53 - DEBUG - datasets.utils.filelock - Lock 139621810208528 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:09:53 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139613941689216 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:09:53 - DEBUG - datasets.utils.filelock - Lock 139613941689216 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:09:53 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603002 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:09:53 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:09:55 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:09:55 - DEBUG - datasets.utils.filelock - Attempting to release lock 139613941689216 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:09:55 - DEBUG - datasets.utils.filelock - Lock 139613941689216 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:12:53 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810667472 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:12:53 - DEBUG - datasets.utils.filelock - Lock 139621810667472 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:12:53 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602772 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:12:53 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:12:54 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:12:54 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810667472 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:12:54 - DEBUG - datasets.utils.filelock - Lock 139621810667472 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:15:53 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810523968 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:15:53 - DEBUG - datasets.utils.filelock - Lock 139621810523968 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:15:53 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603379 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:15:53 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:15:54 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:15:54 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810523968 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:15:54 - DEBUG - datasets.utils.filelock - Lock 139621810523968 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:18:52 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614400578128 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:18:52 - DEBUG - datasets.utils.filelock - Lock 139614400578128 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:18:52 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602805 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:18:52 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:18:53 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:18:53 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614400578128 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:18:53 - DEBUG - datasets.utils.filelock - Lock 139614400578128 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:21:54 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621290732032 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:21:54 - DEBUG - datasets.utils.filelock - Lock 139621290732032 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:21:54 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603552 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:21:54 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:21:55 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:21:55 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621290732032 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:21:55 - DEBUG - datasets.utils.filelock - Lock 139621290732032 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:24:56 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614397648608 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:24:56 - DEBUG - datasets.utils.filelock - Lock 139614397648608 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:24:56 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602941 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:24:56 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:24:57 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:24:57 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614397648608 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:24:57 - DEBUG - datasets.utils.filelock - Lock 139614397648608 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:27:57 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139613941689216 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:27:57 - DEBUG - datasets.utils.filelock - Lock 139613941689216 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:27:57 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603053 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:27:57 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:27:58 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:27:58 - DEBUG - datasets.utils.filelock - Attempting to release lock 139613941689216 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:27:58 - DEBUG - datasets.utils.filelock - Lock 139613941689216 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:30:59 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621272209104 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:30:59 - DEBUG - datasets.utils.filelock - Lock 139621272209104 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:30:59 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603011 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:30:59 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:31:00 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:31:00 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621272209104 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:31:00 - DEBUG - datasets.utils.filelock - Lock 139621272209104 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:34:00 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810283040 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:34:00 - DEBUG - datasets.utils.filelock - Lock 139621810283040 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:34:00 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602961 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:34:00 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:34:02 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:34:02 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810283040 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:34:02 - DEBUG - datasets.utils.filelock - Lock 139621810283040 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:37:02 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614397481840 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:37:02 - DEBUG - datasets.utils.filelock - Lock 139614397481840 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:37:02 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603160 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:37:02 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:37:04 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:37:04 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614397481840 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:37:04 - DEBUG - datasets.utils.filelock - Lock 139614397481840 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:40:06 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810666752 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:40:06 - DEBUG - datasets.utils.filelock - Lock 139621810666752 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:40:06 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602992 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:40:06 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:40:07 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:40:07 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810666752 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:40:07 - DEBUG - datasets.utils.filelock - Lock 139621810666752 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:43:06 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621290248992 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:43:06 - DEBUG - datasets.utils.filelock - Lock 139621290248992 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:43:06 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603440 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:43:06 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:43:07 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:43:07 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621290248992 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:43:07 - DEBUG - datasets.utils.filelock - Lock 139621290248992 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:46:09 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810667424 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:46:09 - DEBUG - datasets.utils.filelock - Lock 139621810667424 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:46:09 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602835 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:46:09 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:46:10 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:46:10 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810667424 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:46:10 - DEBUG - datasets.utils.filelock - Lock 139621810667424 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:49:11 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614397719072 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:49:11 - DEBUG - datasets.utils.filelock - Lock 139614397719072 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:49:11 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 603433 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:49:11 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:49:13 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:49:13 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614397719072 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:49:13 - DEBUG - datasets.utils.filelock - Lock 139614397719072 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:52:12 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810666752 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:52:12 - DEBUG - datasets.utils.filelock - Lock 139621810666752 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:52:12 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602940 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:52:12 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:52:13 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:52:13 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810666752 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:52:13 - DEBUG - datasets.utils.filelock - Lock 139621810666752 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:55:13 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621810208096 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:55:13 - DEBUG - datasets.utils.filelock - Lock 139621810208096 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:55:13 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602939 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:55:13 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:55:14 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:55:14 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621810208096 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:55:14 - DEBUG - datasets.utils.filelock - Lock 139621810208096 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:14 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139614397481840 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:14 - DEBUG - datasets.utils.filelock - Lock 139614397481840 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:14 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 602914 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:58:14 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:58:16 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:58:16 - DEBUG - datasets.utils.filelock - Attempting to release lock 139614397481840 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:16 - DEBUG - datasets.utils.filelock - Lock 139614397481840 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:27 - INFO - __main__ - *** Evaluate ***
+03/21/2022 14:58:35 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139621290766048 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:35 - DEBUG - datasets.utils.filelock - Lock 139621290766048 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:35 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 604110 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 14:58:35 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 14:58:36 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 14:58:36 - DEBUG - datasets.utils.filelock - Attempting to release lock 139621290766048 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 14:58:36 - DEBUG - datasets.utils.filelock - Lock 139621290766048 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:18:40 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 2distributed training: False, 16-bits training: False
+03/21/2022 22:18:40 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=False,
+do_predict=True,
+do_train=False,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=True,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=10,
+log_level_replica=10,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/roberta-wwm-finance/runs/Mar21_22-18-40_container-9a9811be3c-fb14aeb8,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.EPOCH,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=32.0,
+output_dir=/root/autodl-tmp/roberta-wwm-finance,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=64,
+per_device_train_batch_size=40,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/roberta-wwm-finance,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=25,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+03/21/2022 22:18:40 - DEBUG - datasets.load - Checking txt/txt.py for additional imports.
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140028843365520 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Lock 140028843365520 acquired on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Attempting to release lock 140028843365520 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Lock 140028843365520 released on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:18:40 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/datasets/txt/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/txt.py
+03/21/2022 22:18:40 - WARNING - datasets.builder - Using custom data configuration default-9b6a90b285e7fffd
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140028848852080 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Lock 140028848852080 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Attempting to release lock 140028848852080 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Lock 140028848852080 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140028843366816 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:40 - DEBUG - datasets.utils.filelock - Lock 140028843366816 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:40 - INFO - datasets.builder - Generating dataset text_ner (/root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15)
+03/21/2022 22:18:41 - INFO - datasets.builder - Dataset not on Hf google storage. Downloading and preparing it from source
+03/21/2022 22:18:41 - INFO - datasets.utils.download_manager - Downloading took 0.0 min
+03/21/2022 22:18:41 - INFO - datasets.utils.download_manager - Checksum Computation took 0.0 min
+03/21/2022 22:18:41 - INFO - datasets.utils.info_utils - Unable to verify checksums.
+03/21/2022 22:18:41 - INFO - datasets.builder - Generating train split
+03/21/2022 22:18:43 - DEBUG - datasets.arrow_writer - Done writing 8850 examples in 6521069 bytes /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete/text_ner-train.arrow.
+03/21/2022 22:18:43 - INFO - datasets.builder - Generating validation split
+03/21/2022 22:18:44 - DEBUG - datasets.arrow_writer - Done writing 1096 examples in 790617 bytes /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete/text_ner-validation.arrow.
+03/21/2022 22:18:44 - INFO - datasets.builder - Generating test split
+03/21/2022 22:18:44 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 784114 bytes /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete/text_ner-test.arrow.
+03/21/2022 22:18:44 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/21/2022 22:18:44 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140028848852800 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 22:18:44 - DEBUG - datasets.utils.filelock - Lock 140028848852800 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 22:18:44 - DEBUG - datasets.utils.filelock - Attempting to release lock 140028848852800 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 22:18:44 - DEBUG - datasets.utils.filelock - Lock 140028848852800 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.incomplete.lock
+03/21/2022 22:18:44 - DEBUG - datasets.utils.filelock - Attempting to release lock 140028843366816 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:44 - DEBUG - datasets.utils.filelock - Lock 140028843366816 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:18:44 - DEBUG - datasets.builder - Constructing Dataset for split train, validation, test, from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:18:48 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-661538a3744c31b2.arrow
+03/21/2022 22:18:48 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 1576365 bytes /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/tmp521ipmo5.
+03/21/2022 22:20:30 - WARNING - datasets.load - Using the latest cached version of the module from /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval/c8563af43bdce095d0f9e8b8b79c9c96d5ea5499b3bf66f90301c9cb82910f11 (last modified on Mon Mar 21 22:01:13 2022) since it couldn't be found locally at seqeval, or remotely on the Hugging Face Hub.
+03/21/2022 22:20:38 - INFO - __main__ - *** Predict ***
+03/21/2022 22:20:51 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 140028847812560 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:20:51 - DEBUG - datasets.utils.filelock - Lock 140028847812560 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:20:51 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 602600 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 22:20:51 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 22:20:52 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 22:20:52 - DEBUG - datasets.utils.filelock - Attempting to release lock 140028847812560 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:20:52 - DEBUG - datasets.utils.filelock - Lock 140028847812560 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:25:19 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 2distributed training: False, 16-bits training: False
+03/21/2022 22:25:19 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=False,
+do_predict=True,
+do_train=False,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=True,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=10,
+log_level_replica=10,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/roberta-wwm-finance/runs/Mar21_22-25-19_container-9a9811be3c-fb14aeb8,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.EPOCH,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=32.0,
+output_dir=/root/autodl-tmp/roberta-wwm-finance,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=64,
+per_device_train_batch_size=40,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/roberta-wwm-finance,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=25,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+03/21/2022 22:25:19 - DEBUG - datasets.load - Checking txt/txt.py for additional imports.
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139966937278160 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Lock 139966937278160 acquired on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Attempting to release lock 139966937278160 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Lock 139966937278160 released on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:25:19 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/datasets/txt/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/txt.py
+03/21/2022 22:25:19 - WARNING - datasets.builder - Using custom data configuration default-9b6a90b285e7fffd
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139966937719472 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Lock 139966937719472 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+03/21/2022 22:25:19 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Attempting to release lock 139966937719472 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Lock 139966937719472 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139966937278784 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Lock 139966937278784 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - WARNING - datasets.builder - Reusing dataset text_ner (/root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15)
+03/21/2022 22:25:19 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Attempting to release lock 139966937278784 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - DEBUG - datasets.utils.filelock - Lock 139966937278784 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:25:19 - DEBUG - datasets.builder - Constructing Dataset for split train, validation, test, from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:30:46 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-71897ddd885dbdec.arrow
+03/21/2022 22:30:46 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 1576365 bytes /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/tmpe_86me9y.
+03/21/2022 22:30:48 - DEBUG - datasets.load - Checking /root/.cache/huggingface/datasets/downloads/97fd0798f93700f6de84066108b8c335661ac2940e504ee1492a9e287a12e3e2.63490f48f0656d09ada2c86daed79587694915df82dd311e407b049ad2f525eb.py for additional imports.
+03/21/2022 22:30:48 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139963849255040 on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:30:48 - DEBUG - datasets.utils.filelock - Lock 139963849255040 acquired on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:30:48 - DEBUG - datasets.utils.filelock - Attempting to release lock 139963849255040 on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:30:48 - DEBUG - datasets.utils.filelock - Lock 139963849255040 released on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:30:48 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval/c8563af43bdce095d0f9e8b8b79c9c96d5ea5499b3bf66f90301c9cb82910f11/seqeval.py
+03/21/2022 22:30:55 - INFO - __main__ - *** Predict ***
+03/21/2022 22:31:08 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139974393617136 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:31:08 - DEBUG - datasets.utils.filelock - Lock 139974393617136 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:31:08 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 762828 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 22:31:08 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 22:31:09 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 22:31:09 - DEBUG - datasets.utils.filelock - Attempting to release lock 139974393617136 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:31:09 - DEBUG - datasets.utils.filelock - Lock 139974393617136 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:33:23 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 2distributed training: False, 16-bits training: False
+03/21/2022 22:33:23 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=False,
+do_predict=True,
+do_train=False,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=True,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=10,
+log_level_replica=10,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/roberta-wwm-clue/runs/Mar21_22-33-23_container-9a9811be3c-fb14aeb8,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.EPOCH,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=32.0,
+output_dir=/root/autodl-tmp/roberta-wwm-clue,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=64,
+per_device_train_batch_size=40,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/roberta-wwm-clue,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=25,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+03/21/2022 22:33:23 - DEBUG - datasets.load - Checking txt/txt.py for additional imports.
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139767863780880 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Lock 139767863780880 acquired on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Attempting to release lock 139767863780880 on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Lock 139767863780880 released on /root/.cache/huggingface/modules/datasets_modules/datasets/txt.lock
+03/21/2022 22:33:23 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/datasets/txt/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/txt.py
+03/21/2022 22:33:23 - WARNING - datasets.builder - Using custom data configuration default-9b6a90b285e7fffd
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139767864197952 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Lock 139767864197952 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+03/21/2022 22:33:23 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Attempting to release lock 139767864197952 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Lock 139767864197952 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139767863781552 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Lock 139767863781552 acquired on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - WARNING - datasets.builder - Reusing dataset text_ner (/root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15)
+03/21/2022 22:33:23 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Attempting to release lock 139767863781552 on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - DEBUG - datasets.utils.filelock - Lock 139767863781552 released on /root/.cache/huggingface/datasets/_root_.cache_huggingface_datasets_text_ner_default-9b6a90b285e7fffd_0.0.0_3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15.lock
+03/21/2022 22:33:23 - DEBUG - datasets.builder - Constructing Dataset for split train, validation, test, from /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15
+03/21/2022 22:33:30 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-cd71add5d39d4606.arrow
+03/21/2022 22:33:30 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 1576365 bytes /root/.cache/huggingface/datasets/text_ner/default-9b6a90b285e7fffd/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/tmp1ehlgk1e.
+03/21/2022 22:33:32 - DEBUG - datasets.load - Checking /root/.cache/huggingface/datasets/downloads/97fd0798f93700f6de84066108b8c335661ac2940e504ee1492a9e287a12e3e2.63490f48f0656d09ada2c86daed79587694915df82dd311e407b049ad2f525eb.py for additional imports.
+03/21/2022 22:33:32 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139767632263872 on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:33:32 - DEBUG - datasets.utils.filelock - Lock 139767632263872 acquired on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:33:32 - DEBUG - datasets.utils.filelock - Attempting to release lock 139767632263872 on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:33:32 - DEBUG - datasets.utils.filelock - Lock 139767632263872 released on /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval.lock
+03/21/2022 22:33:32 - DEBUG - datasets.load - Created importable dataset file at /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval/c8563af43bdce095d0f9e8b8b79c9c96d5ea5499b3bf66f90301c9cb82910f11/seqeval.py
+03/21/2022 22:33:40 - INFO - __main__ - *** Predict ***
+03/21/2022 22:33:57 - DEBUG - datasets.utils.filelock - Attempting to acquire lock 139775862956576 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:33:57 - DEBUG - datasets.utils.filelock - Lock 139775862956576 acquired on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:33:57 - DEBUG - datasets.arrow_writer - Done writing 1097 examples in 588046 bytes /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.
+03/21/2022 22:33:57 - DEBUG - datasets.arrow_dataset - Set __getitem__(key) output type to python objects for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+03/21/2022 22:33:58 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+03/21/2022 22:33:58 - DEBUG - datasets.utils.filelock - Attempting to release lock 139775862956576 on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock
+03/21/2022 22:33:58 - DEBUG - datasets.utils.filelock - Lock 139775862956576 released on /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow.lock

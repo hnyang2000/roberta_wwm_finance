@@ -1,0 +1,727 @@
+mber': 83, 'eval_PER_precision': 0.9884169884169884, 'eval_PER_recall': 0.9846153846153847, 'eval_PER_f1': 0.9865125240847784, 'eval_PER_number': 260, 'eval_overall_precision': 0.9830508474576272, 'eval_overall_recall': 0.9830508474576272, 'eval_overall_f1': 0.9830508474576272, 'eval_overall_accuracy': 0.9988515841383503, 'eval_runtime': 1.6055, 'eval_samples_per_second': 151.975, 'eval_steps_per_second': 0.623, 'epoch': 27.0}
+ 84%|███████████████████████████████████████████████████████████████████████████▉              | 621/736 [13:49<01:55,  1.00s/it[INFO|trainer.py:2039] 2022-03-16 21:14:29,075 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo/checkpoint-621    
+[INFO|configuration_utils.py:426] 2022-03-16 21:14:29,076 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-621/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:14:31,395 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-621/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:14:31,397 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-621/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:14:31,398 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-621/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 88%|██████████████████████████████████████████████████████████████████████████████▊           | 644/736 [14:19<01:30,  1.02it/s][INFO|trainer.py:549] 2022-03-16 21:14:59,111 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: tokens, ner_tags, id.
+[INFO|trainer.py:2289] 2022-03-16 21:14:59,115 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:14:59,115 >>   Num examples = 244
+[INFO|trainer.py:2294] 2022-03-16 21:14:59,115 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:15:00 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+ 88%|██████████████████████████████████████████████████████████████████████████████▊           | 644/736 [14:21<01:30,  1.02it/s[INFO|trainer.py:2039] 2022-03-16 21:15:00,876 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo/checkpoint-644    
+[INFO|configuration_utils.py:426] 2022-03-16 21:15:00,878 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-644/config.json
+{'eval_loss': 0.0018564780475571752, 'eval_LOC_precision': 0.9, 'eval_LOC_recall': 0.8181818181818182, 'eval_LOC_f1': 0.8571428571428572, 'eval_LOC_number': 11, 'eval_ORG_precision': 0.9642857142857143, 'eval_ORG_recall': 0.9759036144578314, 'eval_ORG_f1': 0.970059880239521, 'eval_ORG_number': 83, 'eval_PER_precision': 0.9922178988326849, 'eval_PER_recall': 0.9807692307692307, 'eval_PER_f1': 0.9864603481624757, 'eval_PER_number': 260, 'eval_overall_precision': 0.9829059829059829, 'eval_overall_recall': 0.9745762711864406, 'eval_overall_f1': 0.978723404255319, 'eval_overall_accuracy': 0.9982435992704182, 'eval_runtime': 1.7583, 'eval_samples_per_second': 138.773, 'eval_steps_per_second': 0.569, 'epoch': 28.0}
+[INFO|modeling_utils.py:1067] 2022-03-16 21:15:03,237 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-644/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:15:03,238 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-644/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:15:03,238 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-644/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 91%|█████████████████████████████████████████████████████████████████████████████████▌        | 667/736 [14:50<01:08,  1.00it/s][INFO|trainer.py:549] 2022-03-16 21:15:30,177 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: tokens, ner_tags, id.
+[INFO|trainer.py:2289] 2022-03-16 21:15:30,181 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:15:30,182 >>   Num examples = 244
+[INFO|trainer.py:2294] 2022-03-16 21:15:30,182 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:15:31 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+                                                                                                                                 
+{'eval_loss': 0.0022125537507236004, 'eval_LOC_precision': 1.0, 'eval_LOC_recall': 0.8181818181818182, 'eval_LOC_f1': 0.9, 'eval_LOC_number': 11, 'eval_ORG_precision': 0.9642857142857143, 'eval_ORG_recall': 0.9759036144578314, 'eval_ORG_f1': 0.970059880239521, 'eval_ORG_number': 83, 'eval_PER_precision': 0.98828125, 'eval_PER_recall': 0.9730769230769231, 'eval_PER_f1': 0.9806201550387595, 'eval_PER_number': 260, 'eval_overall_precision': 0.9828080229226361, 'eval_overall_recall': 0.9689265536723164, 'eval_overall_f1': 0.9758179231863443, 'eval_overall_accuracy': 0.9979733837735594, 'eval_runtime': 1.7173, 'eval_samples_per_second': 142.0 91%|█████████████████████████████████████████████████████████████████████████████████▌        | 667/736 [14:52<01:08,  1.00it/s[INFO|trainer.py:2039] 2022-03-16 21:15:31,902 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo/checkpoint-667    
+[INFO|configuration_utils.py:426] 2022-03-16 21:15:31,903 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-667/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:15:33,850 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-667/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:15:33,852 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-667/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:15:33,852 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-667/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 94%|████████████████████████████████████████████████████████████████████████████████████▍     | 690/736 [15:20<00:45,  1.01it/s][INFO|trainer.py:549] 2022-03-16 21:16:00,481 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: tokens, ner_tags, id.
+[INFO|trainer.py:2289] 2022-03-16 21:16:00,485 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:16:00,485 >>   Num examples = 244
+[INFO|trainer.py:2294] 2022-03-16 21:16:00,485 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:16:02 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+{'eval_loss': 0.0019038338214159012, 'eval_LOC_precision': 0.9, 'eval_LOC_recall': 0.8181818181818182, 'eval_LOC_f1': 0.8571428571428572, 'eval_LOC_number': 11, 'eval_ORG_precision': 0.9761904761904762, 'eval_ORG_recall': 0.9879518072289156, 'eval_ORG_f1': 0.9820359281437125, 'eval_ORG_number': 83, 'eval_PER_precision': 0.9961240310077519, 'eval_PER_recall': 0.9884615384615385, 'eval_PER_f1': 0.9922779922779923, 'eval_PER_number': 260, 'eval_overall_precision': 0.9886363636363636, 'eval_overall_recall': 0.9830508474576272, 'eval_overall_f1': 0.9858356940509915, 'eval_overall_accuracy': 0.9985813686414916, 'eval_runtime': 1.5693, 'eval_samples_per_second': 155.479, 'eval_steps_per_second': 0.637, 'epoch': 30.0}
+ 94%|████████████████████████████████████████████████████████████████████████████████████▍     | 690/736 [15:22<00:45,  1.01it/s[INFO|trainer.py:2039] 2022-03-16 21:16:02,057 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo/checkpoint-690    
+[INFO|configuration_utils.py:426] 2022-03-16 21:16:02,058 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-690/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:16:03,986 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-690/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:16:03,987 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-690/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:16:03,988 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-690/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 97%|███████████████████████████████████████████████████████████████████████████████████████▏  | 713/736 [15:51<00:24,  1.05s/it][INFO|trainer.py:549] 2022-03-16 21:16:31,041 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: tokens, ner_tags, id.
+[INFO|trainer.py:2289] 2022-03-16 21:16:31,045 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:16:31,045 >>   Num examples = 244
+[INFO|trainer.py:2294] 2022-03-16 21:16:31,045 >>   Batch size = 288
+03/16/2022 21:16:32 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow                                                                                                                             
+{'eval_loss': 0.001817628857679665, 'eval_LOC_precision': 0.9, 'eval_LOC_recall': 0.8181818181818182, 'eval_LOC_f1': 0.8571428571428572, 'eval_LOC_number': 11, 'eval_ORG_precision': 0.9761904761904762, 'eval_ORG_recall': 0.9879518072289156, 'eval_ORG_f1': 0.9820359281437125, 'eval_ORG_number': 83, 'eval_PER_precision': 0.9921875, 'eval_PER_recall': 0.9769230769230769, 'eval_PER_f1': 0.9844961240310077, 'eval_PER_number': 260, 'eval_overall_precision': 0.9857142857142858, 'eval_overall_recall': 0.9745762711864406, 'eval_overall_f1': 0.9801136363636362, 'eval_overall_accuracy': 0.9982435992704182, 'eval_runtime': 1.5782, 'eval_samples_per_second': 154.611, 'eval_steps_per_second': 0.634, 'epoch': 31.0}
+ 97%|███████████████████████████████████████████████████████████████████████████████████████▏  | 713/736 [15:52<00:24,  1.05s/it[INFO|trainer.py:2039] 2022-03-16 21:16:32,626 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo/checkpoint-713    
+[INFO|configuration_utils.py:426] 2022-03-16 21:16:32,628 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-713/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:16:34,461 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-713/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:16:34,462 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-713/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:16:34,462 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-713/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+100%|██████████████████████████████████████████████████████████████████████████████████████████| 736/736 [16:22<00:00,  1.02it/s][INFO|trainer.py:549] 2022-03-16 21:17:02,011 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: tokens, ner_tags, id.
+[INFO|trainer.py:2289] 2022-03-16 21:17:02,015 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:17:02,015 >>   Num examples = 244
+[INFO|trainer.py:2294] 2022-03-16 21:17:02,015 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:17:03 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+                                                                                                                                 
+{'eval_loss': 0.0018121848115697503, 'eval_LOC_precision': 0.9, 'eval_LOC_recall': 0.8181818181818182, 'eval_LOC_f1': 0.8571428571428572, 'eval_LOC_number': 11, 'eval_ORG_precision': 0.9761904761904762, 'eval_ORG_recall': 0.9879518072289156, 'eval_ORG_f1': 0.9820359281437125, 'eval_ORG_number': 83, 'eval_PER_precision': 0.9922178988326849, 'eval_PER_recall': 0.9807692307692307, 'eval_PER_f1': 0.9864603481624757, 'eval_PER_number': 260, 'eval_overall_precision': 0.9857549857549858, 'eval_overall_recall': 0.9774011299435028, 'eval_overall_f1': 0.9815602836879432, 'eval_overall_accuracy': 0.9983787070188476, 'eval_runtime': 1.5434, 'eval_sa100%|██████████████████████████████████████████████████████████████████████████████████████████| 736/736 [16:23<00:00,  1.02it/s[INFO|trainer.py:2039] 2022-03-16 21:17:03,565 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo/checkpoint-736    
+[INFO|configuration_utils.py:426] 2022-03-16 21:17:03,566 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-736/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:17:05,465 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-736/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:17:05,466 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-736/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:17:05,466 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/checkpoint-736/special_tokens_map.json
+[INFO|trainer.py:1429] 2022-03-16 21:17:08,718 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+[INFO|trainer.py:1437] 2022-03-16 21:17:08,718 >> Loading best model from /root/autodl-tmp/roberta-wwm-weibo/checkpoint-460 (score: 0.0014390272554010153).
+{'train_runtime': 994.2694, 'train_samples_per_second': 43.481, 'train_steps_per_second': 0.74, 'train_loss': 0.05210532345201658, 'epoch': 32.0}
+100%|██████████████████████████████████████████████████████████████████████████████████████████| 736/736 [16:29<00:00,  1.34s/it]
+[INFO|trainer.py:2039] 2022-03-16 21:17:09,718 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-weibo
+[INFO|configuration_utils.py:426] 2022-03-16 21:17:09,719 >> Configuration saved in /root/autodl-tmp/roberta-wwm-weibo/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:17:11,161 >> Model weights saved in /root/autodl-tmp/roberta-wwm-weibo/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:17:11,162 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-weibo/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:17:11,162 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-weibo/special_tokens_map.json
+***** train metrics *****
+  epoch                    =       32.0
+  train_loss               =     0.0521
+  train_runtime            = 0:16:34.26
+  train_samples            =       1351
+  train_samples_per_second =     43.481
+  train_steps_per_second   =       0.74
+[INFO|trainer.py:549] 2022-03-16 21:17:11,194 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: tokens, ner_tags, id.
+03/16/2022 21:17:11 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:2289] 2022-03-16 21:17:11,197 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:17:11,197 >>   Num examples = 244
+[INFO|trainer.py:2294] 2022-03-16 21:17:11,197 >>   Batch size = 288
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|                                                                                                      | 0/1 [00:00<?, ?it/s]03/16/2022 21:17:12 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+100%|██████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.48it/s]
+***** eval metrics *****
+  epoch                   =       32.0
+  eval_LOC_f1             =        1.0
+  eval_LOC_number         =         11
+  eval_LOC_precision      =        1.0
+  eval_LOC_recall         =        1.0
+  eval_ORG_f1             =      0.982
+  eval_ORG_number         =         83
+  eval_ORG_precision      =     0.9762
+  eval_ORG_recall         =      0.988
+  eval_PER_f1             =     0.9923
+  eval_PER_number         =        260
+  eval_PER_precision      =     0.9923
+  eval_PER_recall         =     0.9923
+  eval_loss               =     0.0014
+  eval_overall_accuracy   =     0.9992
+  eval_overall_f1         =     0.9901
+  eval_overall_precision  =     0.9887
+  eval_overall_recall     =     0.9915
+  eval_runtime            = 0:00:01.57
+  eval_samples            =        244
+  eval_samples_per_second =    154.925
+  eval_steps_per_second   =      0.635
+
+wandb: Waiting for W&B process to finish... (success).
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                    eval/LOC_f1 ▁▂▅▇▇▇▇█▇▇█████▆███████████▇▇▇▇▇█
+wandb:                eval/LOC_number ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:             eval/LOC_precision ▁▃▆█▇█▇█▇██████▇███████████▇█▇▇▇█
+wandb:                eval/LOC_recall ▁▁▅▅▆▆▆█▆▆█▇███▅▇██████████▆▆▆▆▆█
+wandb:                    eval/ORG_f1 ▁▄▆▇█████████████████████████████
+wandb:                eval/ORG_number ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:             eval/ORG_precision ▁▅▆▇▇████████████████████████████
+wandb:                eval/ORG_recall ▁▄▇▇█████████████████████████████
+wandb:                    eval/PER_f1 ▁▅▆▇▇▇████▇██████████████████████
+wandb:                eval/PER_number ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:             eval/PER_precision ▁▄▅▇▇▇▇█▇█▇█▇████████████████████
+wandb:                eval/PER_recall ▁▅▆▇▇▇██████████████████████▇████
+wandb:                      eval/loss █▅▃▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:          eval/overall_accuracy ▁▄▆▇█▇███████████████████████████
+wandb:                eval/overall_f1 ▁▄▆▇▇████████████████████████████
+wandb:         eval/overall_precision ▁▄▆▇▇████████████████████████████
+wandb:            eval/overall_recall ▁▅▆▇▇███████████████████████▇████
+wandb:                   eval/runtime ▅▃▃▆█▂█▂▃▃▃▃▃▃▄▄▃▂▅▄▃▂▃▁▂▁▄█▇▂▃▂▃
+wandb:        eval/samples_per_second ▄▆▆▃▁▇▁▇▆▆▆▅▆▆▅▅▆▇▄▅▆▆▆█▇█▅▁▂▆▆▇▆
+wandb:          eval/steps_per_second ▄▆▆▃▁▇▁▇▆▆▆▅▆▅▅▅▆▇▄▄▆▆▆█▇█▅▁▂▆▆▇▆
+wandb:                    train/epoch ▁▁▁▂▂▂▂▃▃▃▃▃▄▄▄▄▅▅▅▅▆▆▆▆▆▆▇▇▇▇█████
+wandb:              train/global_step ▁▁▁▂▂▂▂▃▃▃▃▃▄▄▄▄▅▅▅▅▆▆▆▆▆▆▇▇▇▇█████
+wandb:            train/learning_rate ▁
+wandb:                     train/loss ▁
+wandb:               train/total_flos ▁
+wandb:               train/train_loss ▁
+wandb:            train/train_runtime ▁
+wandb: train/train_samples_per_second ▁
+wandb:   train/train_steps_per_second ▁
+wandb: 
+wandb: Run summary:
+wandb:                    eval/LOC_f1 1.0
+wandb:                eval/LOC_number 11
+wandb:             eval/LOC_precision 1.0
+wandb:                eval/LOC_recall 1.0
+wandb:                    eval/ORG_f1 0.98204
+wandb:                eval/ORG_number 83
+wandb:             eval/ORG_precision 0.97619
+wandb:                eval/ORG_recall 0.98795
+wandb:                    eval/PER_f1 0.99231
+wandb:                eval/PER_number 260
+wandb:             eval/PER_precision 0.99231
+wandb:                eval/PER_recall 0.99231
+wandb:                      eval/loss 0.00144
+wandb:          eval/overall_accuracy 0.99919
+wandb:                eval/overall_f1 0.99013
+wandb:         eval/overall_precision 0.98873
+wandb:            eval/overall_recall 0.99153
+wandb:                   eval/runtime 1.575
+wandb:        eval/samples_per_second 154.925
+wandb:          eval/steps_per_second 0.635
+wandb:                    train/epoch 32.0
+wandb:              train/global_step 736
+wandb:            train/learning_rate 1e-05
+wandb:                     train/loss 0.0727
+wandb:               train/total_flos 1.225299566342502e+16
+wandb:               train/train_loss 0.05211
+wandb:            train/train_runtime 994.2694
+wandb: train/train_samples_per_second 43.481
+wandb:   train/train_steps_per_second 0.74
+wandb: 
+wandb: Synced /root/autodl-tmp/roberta-wwm-weibo: https://wandb.ai/hnyang2000/huggingface/runs/mgedxdub
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220316_210036-mgedxdub/logs
+root@container-9f98118b3c-1916a229:~/roberta_wwm_rmrb/examples/pytorch/token-classification# python run_ner_bilstm_crf.py --output_dir /root/autodl-tmp/roberta-wwm-clue --train_file clue_train.txt --validation_file clue_val.txt --test_file clue_test.txt --do_train True --do_eval True --do_predict False --per_device_train_batch_size 20 --per_device_eval_batch_size 96 --num_train_epochs 32 --resume_from_checkpoint /root/roberta-wwm-weibo-best --evaluation_strategy epoch --load_best_model_at_end True --max_seq_length 256 --learning_rate 2e-5 --save_total_limit 25
+03/16/2022 21:20:21 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 3distributed training: False, 16-bits training: False
+03/16/2022 21:20:21 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=3,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.EPOCH,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=True,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=2e-05,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/roberta-wwm-clue/runs/Mar16_21-20-21_container-9f98118b3c-1916a229,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=loss,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=32.0,
+output_dir=/root/autodl-tmp/roberta-wwm-clue,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=96,
+per_device_train_batch_size=20,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=/root/roberta-wwm-weibo-best,
+run_name=/root/autodl-tmp/roberta-wwm-clue,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.EPOCH,
+save_total_limit=25,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+03/16/2022 21:20:21 - WARNING - datasets.builder - Using custom data configuration default-0eb06481602fdfd8
+03/16/2022 21:20:21 - INFO - datasets.builder - Generating dataset text_ner (/root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15)
+Downloading and preparing dataset text_ner/default to /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15...
+03/16/2022 21:20:22 - INFO - datasets.builder - Dataset not on Hf google storage. Downloading and preparing it from source
+100%|████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 9085.14it/s]
+03/16/2022 21:20:22 - INFO - datasets.utils.download_manager - Downloading took 0.0 min
+03/16/2022 21:20:22 - INFO - datasets.utils.download_manager - Checksum Computation took 0.0 min
+100%|████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 1548.09it/s]
+03/16/2022 21:20:22 - INFO - datasets.utils.info_utils - Unable to verify checksums.
+03/16/2022 21:20:22 - INFO - datasets.builder - Generating split train
+03/16/2022 21:20:25 - INFO - datasets.builder - Generating split validation
+03/16/2022 21:20:26 - INFO - datasets.builder - Generating split test
+03/16/2022 21:20:26 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+Dataset text_ner downloaded and prepared to /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15. Subsequent calls will reuse this data.
+100%|█████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00, 720.67it/s]
+[INFO|configuration_utils.py:609] 2022-03-16 21:20:28,770 >> loading configuration file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/c675789bf641993533370bd5ee9afeb828f8997b7396bb0b762da288ec1a655a.78358e34af4e11adf13d65c5590e41a4c8fb3af60cd918d634f7617e2a9622fc
+[INFO|configuration_utils.py:645] 2022-03-16 21:20:28,773 >> Model config BertConfig {
+  "_name_or_path": "hfl/chinese-roberta-wwm-ext-large",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "finetuning_task": "ner",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "id2label": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "label2id": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.16.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 21128
+}
+
+[INFO|configuration_utils.py:609] 2022-03-16 21:20:33,240 >> loading configuration file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/c675789bf641993533370bd5ee9afeb828f8997b7396bb0b762da288ec1a655a.78358e34af4e11adf13d65c5590e41a4c8fb3af60cd918d634f7617e2a9622fc
+[INFO|configuration_utils.py:645] 2022-03-16 21:20:33,243 >> Model config BertConfig {
+  "_name_or_path": "hfl/chinese-roberta-wwm-ext-large",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.16.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 21128
+}
+
+[INFO|tokenization_utils_base.py:1740] 2022-03-16 21:20:39,854 >> loading file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/vocab.txt from cache at /root/.cache/huggingface/transformers/9c86d721fa0ff0587ec0e2f72a39a2e4a0b3492dcae39bce7a430a67036a6130.accd894ff58c6ff7bd4f3072890776c14f4ea34fcc08e79cd88c2d157756dceb
+[INFO|tokenization_utils_base.py:1740] 2022-03-16 21:20:39,854 >> loading file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/55c6f69080f3df245c3e8e7a1d6a88abc2b09e9cbbff14b1aeb2e5c6bd5a9bb2.660ed5c7513bf13d4607410502a84e0de517eb889ff8c401068a1688868e1ccb
+[INFO|tokenization_utils_base.py:1740] 2022-03-16 21:20:39,855 >> loading file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/added_tokens.json from cache at /root/.cache/huggingface/transformers/f78dad79121ad042f880db7b90feb65e3a57bb9980bd8637d06b38000a08718c.5cc6e825eb228a7a5cfd27cb4d7151e97a79fb962b31aaf1813aa102e746584b
+[INFO|tokenization_utils_base.py:1740] 2022-03-16 21:20:39,855 >> loading file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/2ab629a76f19e1d2091febaa74a86ae81b60f9395360d815476a127037a7281e.dd8bd9bfd3664b530ea4e645105f557769387b3da9f79bdb55ed556bdd80611d
+[INFO|tokenization_utils_base.py:1740] 2022-03-16 21:20:39,855 >> loading file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/1e77e98a6ad918d1f2a3c81b8401cf960155b7d9f561a8f2f72fe6e2808b5622.d23f50bbddc3fb34db5a76d47fa9bdd5d75bf4201ad2d49abbcca25629b3e562
+[INFO|configuration_utils.py:609] 2022-03-16 21:20:42,011 >> loading configuration file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/c675789bf641993533370bd5ee9afeb828f8997b7396bb0b762da288ec1a655a.78358e34af4e11adf13d65c5590e41a4c8fb3af60cd918d634f7617e2a9622fc
+[INFO|configuration_utils.py:645] 2022-03-16 21:20:42,013 >> Model config BertConfig {
+  "_name_or_path": "hfl/chinese-roberta-wwm-ext-large",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "directionality": "bidi",
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.16.0.dev0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 21128
+}
+
+[INFO|modeling_utils.py:1353] 2022-03-16 21:20:43,191 >> loading weights file https://huggingface.co/hfl/chinese-roberta-wwm-ext-large/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/034b2d859a25f74cf471fe744232a082a85d17cdff179b744ecb4a21adfec99a.5e011b19fe5c0c1e2410943e1c0e22fb0b0781401537358294cb545021fa23b8
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:62: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+[WARNING|modeling_utils.py:1611] 2022-03-16 21:20:48,952 >> Some weights of the model checkpoint at hfl/chinese-roberta-wwm-ext-large were not used when initializing BertForTokenClassification: ['cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:1622] 2022-03-16 21:20:48,952 >> Some weights of BertForTokenClassification were not initialized from the model checkpoint at hfl/chinese-roberta-wwm-ext-large and are newly initialized: ['lstm.bias_ih_l0_reverse', 'crf.transitions', 'lstm.bias_ih_l0', 'lstm.weight_hh_l0', 'lstm.bias_hh_l0', 'lstm.weight_hh_l0_reverse', 'lstm.bias_hh_l0_reverse', 'lstm.weight_ih_l0', 'liner.bias', 'lstm.weight_ih_l0_reverse', 'liner.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Running tokenizer on train dataset:   0%|                                                                 | 0/11 [00:00<?, ?ba/s]03/16/2022 21:20:49 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-95f8ea1f960087fa.arrow
+Running tokenizer on train dataset: 100%|████████████████████████████████████████████████████████| 11/11 [00:01<00:00,  5.78ba/s]
+Running tokenizer on validation dataset:   0%|                                                             | 0/2 [00:00<?, ?ba/s]03/16/2022 21:20:51 - INFO - datasets.arrow_dataset - Caching processed dataset at /root/.cache/huggingface/datasets/text_ner/default-0eb06481602fdfd8/0.0.0/3c633a0a078e77fdb01f7bb31ebb638cc3885c6a8fec3d50f67cb99cd0d30e15/cache-97f16cd336ad4904.arrow
+Running tokenizer on validation dataset: 100%|█████████████████████████████████████████████████████| 2/2 [00:00<00:00,  8.05ba/s]
+03/16/2022 21:22:32 - WARNING - datasets.load - Using the latest cached version of the module from /root/.cache/huggingface/modules/datasets_modules/metrics/seqeval/c8563af43bdce095d0f9e8b8b79c9c96d5ea5499b3bf66f90301c9cb82910f11 (last modified on Mon Mar 14 17:46:27 2022) since it couldn't be found locally at seqeval, or remotely on the Hugging Face Hub.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[INFO|trainer.py:1093] 2022-03-16 21:22:39,997 >> Loading model from /root/roberta-wwm-weibo-best).
+[INFO|trainer.py:549] 2022-03-16 21:22:41,027 >> The following columns in the training set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:1208] 2022-03-16 21:22:41,040 >> ***** Running training *****
+[INFO|trainer.py:1209] 2022-03-16 21:22:41,040 >>   Num examples = 10749
+[INFO|trainer.py:1210] 2022-03-16 21:22:41,040 >>   Num Epochs = 32
+[INFO|trainer.py:1211] 2022-03-16 21:22:41,040 >>   Instantaneous batch size per device = 20
+[INFO|trainer.py:1212] 2022-03-16 21:22:41,040 >>   Total train batch size (w. parallel, distributed & accumulation) = 60
+[INFO|trainer.py:1213] 2022-03-16 21:22:41,040 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1214] 2022-03-16 21:22:41,040 >>   Total optimization steps = 5760
+[INFO|integrations.py:502] 2022-03-16 21:22:41,043 >> Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+wandb: Currently logged in as: hnyang2000 (use `wandb login --relogin` to force relogin)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+        - Avoid using `tokenizers` before the fork if possible
+        - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+wandb: Tracking run with wandb version 0.12.11
+wandb: Run data is saved locally in /root/roberta_wwm_rmrb/examples/pytorch/token-classification/wandb/run-20220316_212242-162d7vuv
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run /root/autodl-tmp/roberta-wwm-clue
+wandb: ⭐️ View project at https://wandb.ai/hnyang2000/huggingface
+wandb: 🚀 View run at https://wandb.ai/hnyang2000/huggingface/runs/162d7vuv
+  0%|                                                                                                   | 0/5760 [00:00<?, ?it/s]/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  3%|██▋                                                                                    | 180/5760 [02:19<1:07:05,  1.39it/s][INFO|trainer.py:549] 2022-03-16 21:25:04,956 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:25:04,959 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:25:04,960 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:25:04,960 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:25:09 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+  3%|██▋                                                                                    | 180/5760 [02:23<1:07:05,  1.39it/s{'eval_loss': 0.022968405857682228, 'eval_LOC_precision': 0.741042345276873, 'eval_LOC_recall': 0.781786941580756, 'eval_LOC_f1': 0.7608695652173914, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.8097560975609757, 'eval_ORG_recall': 0.8366935483870968, 'eval_ORG_f1': 0.8230044620723846, 'eval_ORG_number': 992, 'eval_PER_precision': 0.7756729810568295, 'eval_PER_recall': 0.8663697104677061, 'eval_PER_f1': 0.8185165702261968, 'eval_PER_number': 898, 'eval_overall_precision': 0.7808478425435277, 'eval_overall_recall': 0.834546925566343, 'eval_overall_f1': 0.8068048494329292, 'eval_overall_accuracy': 0.9583565459610028, 'eval_runtime': 4.2884, 'eval_samples_per_second': 313.4, 'eval_steps_per_second': 1.166, 'epoch': 1.0}
+[INFO|trainer.py:2039] 2022-03-16 21:25:09,251 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-180
+[INFO|configuration_utils.py:426] 2022-03-16 21:25:09,253 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-180/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:25:11,157 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-180/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:25:11,159 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-180/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:25:11,159 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-180/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  4%|███▎                                                                                   | 223/5760 [02:58<1:09:51,  1.32it/s]  6%|█████▍                                                                                 | 360/5760 [04:37<1:02:16,  1.45it/s][INFO|trainer.py:549] 2022-03-16 21:27:22,815 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:27:22,819 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:27:22,819 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:27:22,819 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:27:27 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+  6%|█████▍                                                                                 | 360/5760 [04:41<1:02:16,  1.45it/s[INFO|trainer.py:2039] 2022-03-16 21:27:27,208 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-360     
+{'eval_loss': 0.023791400715708733, 'eval_LOC_precision': 0.7269789983844911, 'eval_LOC_recall': 0.7731958762886598, 'eval_LOC_f1': 0.7493755203996669, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.8142023346303502, 'eval_ORG_recall': 0.84375, 'eval_ORG_f1': 0.8287128712871287, 'eval_ORG_number': 992, 'eval_PER_precision': 0.7784431137724551, 'eval_PER_recall': 0.8685968819599109, 'eval_PER_f1': 0.8210526315789474, 'eval_PER_number': 898, 'eval_overall_precision': 0.7802944507361268, 'eval_overall_recall': 0.8361650485436893, 'eval_overall_f1': 0.8072642062097247, 'eval_overall_accuracy': 0.959033028253084, 'eval_runtime': 4.3865, 'eval_samples_per_second': 306.396, 'eval_steps_per_second': 1.14, 'epoch': 2.0}
+[INFO|configuration_utils.py:426] 2022-03-16 21:27:27,210 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-360/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:27:29,460 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-360/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:27:29,461 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-360/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:27:29,462 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-360/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  9%|███████▌                                                                               | 500/5760 [06:29<1:13:56,  1.19it/s]{'loss': 0.1979, 'learning_rate': 1.826388888888889e-05, 'epoch': 2.78}
+  9%|████████▎                                                                                | 540/5760 [06:57<58:15,  1.49it/s][INFO|trainer.py:549] 2022-03-16 21:29:43,417 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:29:43,420 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:29:43,420 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:29:43,420 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:29:47 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+                                                                                                                                 
+100%|██████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:03<00:00,  2.71it/s]{'eval_loss': 0.026005901396274567, 'eval_LOC_precision': 0.7228915662650602, 'eval_LOC_recall': 0.7216494845360825, 'eval_LOC_f1': 0.7222699914015477, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.80620884289746, 'eval_ORG_recall': 0.8639112903225806, 'eval_ORG_f1': 0.8340632603406326, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8067226890756303, 'eval_PER_recall': 0.8552338530066815, 'eval_PER_f1': 0.8302702702702702, 'eval_PER_number': 898, 'eval_overall_precision': 0.7877503852080123, 'eval_overall_recall': 0.8272653721682848, 'eval_overall_f1': 0.8070244672454617, 'eval_overall_accuracy': 0.9594309590131317, 'eval_runtime': 4.  9%|████████▎                                                                                | 540/5760 [07:01<58:15,  1.49it/s[INFO|trainer.py:2039] 2022-03-16 21:29:47,683 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-540     
+[INFO|configuration_utils.py:426] 2022-03-16 21:29:47,685 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-540/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:29:49,532 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-540/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:29:49,533 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-540/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:29:49,534 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-540/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 12%|███████████▏                                                                             | 720/5760 [09:14<59:59,  1.40it/s][INFO|trainer.py:549] 2022-03-16 21:32:00,504 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:32:00,509 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:32:00,509 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:32:00,509 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:32:05 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+{'eval_loss': 0.033977754414081573, 'eval_LOC_precision': 0.7460595446584939, 'eval_LOC_recall': 0.7319587628865979, 'eval_LOC_f1': 0.7389418907198614, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.8074766355140187, 'eval_ORG_recall': 0.8709677419354839, 'eval_ORG_f1': 0.8380213385063046, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8381057268722467, 'eval_PER_recall': 0.8474387527839644, 'eval_PER_f1': 0.8427464008859358, 'eval_PER_number': 898, 'eval_overall_precision': 0.8046292663789721, 'eval_overall_recall': 0.8296925566343042, 'eval_overall_f1': 0.8169687313284206, 'eval_overall_accuracy': 0.9594906486271388, 'eval_runtime': 4.5006, 'eval_samples_per_second': 298.626, 'eval_steps_per_second': 1.111, 'epoch': 4.0}
+ 12%|███████████▏                                                                             | 720/5760 [09:19<59:59,  1.40it/s[INFO|trainer.py:2039] 2022-03-16 21:32:05,013 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-720     
+[INFO|configuration_utils.py:426] 2022-03-16 21:32:05,015 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-720/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:32:07,286 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-720/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:32:07,287 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-720/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:32:07,287 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-720/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 16%|█████████████▉                                                                           | 900/5760 [11:35<58:30,  1.38it/s][INFO|trainer.py:549] 2022-03-16 21:34:21,506 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:34:21,510 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:34:21,510 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:34:21,510 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:34:25 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+ 16%|█████████████▉                                                                           | 900/5760 [11:40<58:30,  1.38it/s]
+{'eval_loss': 0.03664785996079445, 'eval_LOC_precision': 0.7091503267973857, 'eval_LOC_recall': 0.7457044673539519, 'eval_LOC_f1': 0.7269681742043551, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.8237585199610516, 'eval_ORG_recall': 0.8528225806451613, 'eval_ORG_f1': 0.8380386329866271, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8223896663078579, 'eval_PER_recall': 0.8507795100222717, 'eval_PER_f1': 0.836343732895457, 'eval_PER_number': 898, 'eval_overall_precision': 0.7959501557632399, 'eval_overall_recall': 0.8268608414239482, 'eval_overall_f1': 0.811111111111111, 'eval_overall_accuracy': 0.9590927178670912, 'eval_runtime': 4.4897, 'eval_samples_per_second': 299.352, 'eval_steps_per_second': 1.114, 'epoch': 5.0}                                          [INFO|trainer.py:2039] 2022-03-16 21:34:26,003 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-900     
+[INFO|configuration_utils.py:426] 2022-03-16 21:34:26,005 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-900/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:34:28,259 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-900/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:34:28,260 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-900/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:34:28,260 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-900/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 17%|██████████████▉                                                                       | 1000/5760 [12:59<1:11:13,  1.11it/s]{'loss': 0.0512, 'learning_rate': 1.6527777777777777e-05, 'epoch': 5.56}
+ 19%|████████████████▌                                                                       | 1080/5760 [13:58<55:59,  1.39it/s][INFO|trainer.py:549] 2022-03-16 21:36:43,838 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:36:43,842 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:36:43,842 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:36:43,842 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:36:48 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+{'eval_loss': 0.03997208550572395, 'eval_LOC_precision': 0.6915887850467289, 'eval_LOC_recall': 0.7628865979381443, 'eval_LOC_f1': 0.7254901960784315, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.7990697674418604, 'eval_ORG_recall': 0.8659274193548387, 'eval_ORG_f1': 0.8311562651185294, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8198294243070362, 'eval_PER_recall': 0.856347438752784, 'eval_PER_f1': 0.8376906318082789, 'eval_PER_number': 898, 'eval_overall_precision': 0.7804143126177024, 'eval_overall_recall': 0.8381877022653722, 'eval_overall_f1': 0.8082699434367077, 'eval_overall_accuracy': 0.9592319936331078, 'eval_runtime': 4.4089, 'eval_samples_per_second': 304.836, 'eval_steps_per_second': 1.134, 'epoch': 6.0}
+ 19%|████████████████▌                                                                       | 1080/5760 [14:02<55:59,  1.39it/s[INFO|trainer.py:2039] 2022-03-16 21:36:48,255 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-1080    
+[INFO|configuration_utils.py:426] 2022-03-16 21:36:48,257 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1080/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:36:49,794 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1080/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:36:49,795 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1080/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:36:49,795 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1080/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 22%|███████████████████▎                                                                    | 1260/5760 [16:13<52:50,  1.42it/s][INFO|trainer.py:549] 2022-03-16 21:38:59,153 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:38:59,160 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:38:59,160 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:38:59,160 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:39:03 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+{'eval_loss': 0.043812889605760574, 'eval_LOC_precision': 0.7171381031613977, 'eval_LOC_recall': 0.7405498281786942, 'eval_LOC_f1': 0.7286559594251902, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.818359375, 'eval_ORG_recall': 0.844758064516129, 'eval_ORG_f1': 0.8313492063492063, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8175026680896478, 'eval_PER_recall': 0.8530066815144766, 'eval_PER_f1': 0.8348773841961852, 'eval_PER_number': 898, 'eval_overall_precision': 0.7943013270882123, 'eval_overall_recall': 0.823220064724919, 'eval_overall_f1': 0.8085021851410409, 'eval_overall_accuracy': 0.9585754078790291, 'eval_runtime': 4.3227, 'eval_samples_per_second': 310.915, 'eval_steps_per_second': 1.157, 'epoch': 7.0}
+ 22%|███████████████████▎                                                                    | 1260/5760 [16:17<52:50,  1.42it/s[INFO|trainer.py:2039] 2022-03-16 21:39:03,485 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-1260    
+[INFO|configuration_utils.py:426] 2022-03-16 21:39:03,487 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1260/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:39:05,328 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1260/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:39:05,330 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1260/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:39:05,330 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1260/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 25%|██████████████████████                                                                  | 1440/5760 [18:33<50:03,  1.44it/s][INFO|trainer.py:549] 2022-03-16 21:41:19,199 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:41:19,203 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:41:19,203 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:41:19,203 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:41:23 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+
+{'eval_loss': 0.046752460300922394, 'eval_LOC_precision': 0.7135922330097088, 'eval_LOC_recall': 0.7577319587628866, 'eval_LOC_f1': 0.735, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.8101145038167938, 'eval_ORG_recall': 0.8558467741935484, 'eval_ORG_f1': 0.8323529411764706, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8071654373024236, 'eval_PER_recall': 0.8530066815144766, 'eval_PER_f1': 0.8294531672983216, 'eval_PER_number': 898, 'eval_overall_precision': 0.7862332695984704, 'eval_overall_recall': 0.8317152103559871, 'eval_overall_f1': 0.8083349714959701, 'eval_overall_accuracy': 0.9586947871070434, 'eval_runtime': 4.3451, 'eval 25%|██████████████████████                                                                  | 1440/5760 [18:37<50:03,  1.44it/s[INFO|trainer.py:2039] 2022-03-16 21:41:23,552 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-1440    
+[INFO|configuration_utils.py:426] 2022-03-16 21:41:23,554 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1440/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:41:25,966 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1440/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:41:25,967 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1440/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:41:25,968 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1440/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 26%|██████████████████████▍                                                               | 1500/5760 [19:27<1:05:40,  1.08it/s]{'loss': 0.0204, 'learning_rate': 1.479166666666667e-05, 'epoch': 8.33}
+ 28%|████████████████████████▊                                                               | 1620/5760 [20:54<48:01,  1.44it/s][INFO|trainer.py:549] 2022-03-16 21:43:40,185 >> The following columns in the evaluation set  don't have a corresponding argument in `BertForTokenClassification.forward` and have been ignored: ner_tags, id, tokens.
+[INFO|trainer.py:2289] 2022-03-16 21:43:40,188 >> ***** Running Evaluation *****
+[INFO|trainer.py:2291] 2022-03-16 21:43:40,188 >>   Num examples = 1344
+[INFO|trainer.py:2294] 2022-03-16 21:43:40,188 >>   Batch size = 288
+                                                                                                                                03/16/2022 21:43:44 - INFO - datasets.metric - Removing /root/.cache/huggingface/metrics/seqeval/default/default_experiment-1-0.arrow
+{'eval_loss': 0.049643583595752716, 'eval_LOC_precision': 0.7194719471947195, 'eval_LOC_recall': 0.7491408934707904, 'eval_LOC_f1': 0.734006734006734, 'eval_LOC_number': 582, 'eval_ORG_precision': 0.8078393881453155, 'eval_ORG_recall': 0.8518145161290323, 'eval_ORG_f1': 0.8292443572129539, 'eval_ORG_number': 992, 'eval_PER_precision': 0.8232758620689655, 'eval_PER_recall': 0.8507795100222717, 'eval_PER_f1': 0.836801752464403, 'eval_PER_number': 898, 'eval_overall_precision': 0.7926356589147286, 'eval_overall_recall': 0.8272653721682848, 'eval_overall_f1': 0.8095803642121931, 'eval_overall_accuracy': 0.9582968563469956, 'eval_runtime': 3.9339, 'eval_samples_per_second': 341.649, 'eval_steps_per_second': 1.271, 'epoch': 9.0}
+ 28%|████████████████████████▊                                                               | 1620/5760 [20:58<48:01,  1.44it/s[INFO|trainer.py:2039] 2022-03-16 21:43:44,124 >> Saving model checkpoint to /root/autodl-tmp/roberta-wwm-clue/checkpoint-1620    
+[INFO|configuration_utils.py:426] 2022-03-16 21:43:44,125 >> Configuration saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1620/config.json
+[INFO|modeling_utils.py:1067] 2022-03-16 21:43:45,648 >> Model weights saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1620/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2043] 2022-03-16 21:43:45,649 >> tokenizer config file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1620/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2049] 2022-03-16 21:43:45,649 >> Special tokens file saved in /root/autodl-tmp/roberta-wwm-clue/checkpoint-1620/special_tokens_map.json
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/rnn.py:691: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at  ../aten/src/ATen/native/cudnn/RNN.cpp:925.)
+  result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 30%|██████████████████████████▏                                                             | 1713/5760 [22:08<45:47,  1.47it/s]^CTraceback (most recent call last):
+  File "run_ner_bilstm_crf.py", line 610, in <module>
+    main()
+  File "run_ner_bilstm_crf.py", line 541, in main
+    train_result = trainer.train(resume_from_checkpoint=checkpoint)
+  File "/root/roberta_wwm_rmrb/src/transformers/trainer.py", line 1329, in train
+    tr_loss_step = self.training_step(model, inputs)
+  File "/root/roberta_wwm_rmrb/src/transformers/trainer.py", line 1893, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/root/roberta_wwm_rmrb/src/transformers/trainer.py", line 1925, in compute_loss
+    outputs = model(**inputs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 167, in forward
+    replicas = self.replicate(self.module, self.device_ids[:len(inputs)])
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 172, in replicate
+    return replicate(module, device_ids, not torch.is_grad_enabled())
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/replicate.py", line 91, in replicate
+    param_copies = _broadcast_coalesced_reshape(params, devices, detach)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/replicate.py", line 71, in _broadcast_coalesced_reshape
+    tensor_copies = Broadcast.apply(devices, *tensors)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/_functions.py", line 23, in forward
+    outputs = comm.broadcast_coalesced(inputs, ctx.target_gpus)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/nn/parallel/comm.py", line 58, in broadcast_coalesced
+    return torch._C._broadcast_coalesced(tensors, devices, buffer_size)
+KeyboardInterrupt
+
+wandb: Waiting for W&B process to finish... (failed 255). Press Control-C to abort syncing.
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:             eval/LOC_f1 █▆▁▄▂▂▂▃▃
+wandb:         eval/LOC_number ▁▁▁▁▁▁▁▁▁
+wandb:      eval/LOC_precision ▇▆▅█▃▁▄▄▅
+wandb:         eval/LOC_recall █▇▁▂▄▆▃▅▄
+wandb:             eval/ORG_f1 ▁▄▆██▅▅▅▄
+wandb:         eval/ORG_number ▁▁▁▁▁▁▁▁▁
+wandb:      eval/ORG_precision ▄▅▃▃█▁▆▄▃
+wandb:         eval/ORG_recall ▁▂▇█▄▇▃▅▄
+wandb:             eval/PER_f1 ▁▂▄█▆▇▆▄▆
+wandb:         eval/PER_number ▁▁▁▁▁▁▁▁▁
+wandb:      eval/PER_precision ▁▁▄█▆▆▆▅▆
+wandb:         eval/PER_recall ▇█▄▁▂▄▃▃▂
+wandb:               eval/loss ▁▁▂▄▅▅▆▇█
+wandb:   eval/overall_accuracy ▁▅██▆▆▃▃▁
+wandb:         eval/overall_f1 ▁▁▁█▄▂▂▂▃
+wandb:  eval/overall_precision ▁▁▃█▆▁▅▃▅
+wandb:     eval/overall_recall ▆▇▃▄▃█▁▅▃
+wandb:            eval/runtime ▅▇▅██▇▆▆▁
+wandb: eval/samples_per_second ▃▂▄▁▁▂▃▃█
+wandb:   eval/steps_per_second ▃▂▄▁▁▂▃▃█
+wandb:             train/epoch ▁▂▃▃▄▅▅▅▆▇▇█
+wandb:       train/global_step ▁▂▃▃▄▅▅▅▆▇▇█
+wandb:     train/learning_rate █▅▁
+wandb:              train/loss █▂▁
+wandb: 
+wandb: Run summary:
+wandb:             eval/LOC_f1 0.73401
+wandb:         eval/LOC_number 582
+wandb:      eval/LOC_precision 0.71947
+wandb:         eval/LOC_recall 0.74914
+wandb:             eval/ORG_f1 0.82924
+wandb:         eval/ORG_number 992
+wandb:      eval/ORG_precision 0.80784
+wandb:         eval/ORG_recall 0.85181
+wandb:             eval/PER_f1 0.8368
+wandb:         eval/PER_number 898
+wandb:      eval/PER_precision 0.82328
+wandb:         eval/PER_recall 0.85078
+wandb:               eval/loss 0.04964
+wandb:   eval/overall_accuracy 0.9583
+wandb:         eval/overall_f1 0.80958
+wandb:  eval/overall_precision 0.79264
+wandb:     eval/overall_recall 0.82727
+wandb:            eval/runtime 3.9339
+wandb: eval/samples_per_second 341.649
+wandb:   eval/steps_per_second 1.271
+wandb:             train/epoch 9.0
+wandb:       train/global_step 1620
+wandb:     train/learning_rate 1e-05
+wandb:              train/loss 0.0204
+wandb: 
+wandb: Synced /root/autodl-tmp/roberta-wwm-clue: https://wandb.ai/hnyang2000/huggingface/runs/162d7vuv
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220316_212242-162d7vuv/logs
+
+root@container-9f98118b3c-1916a229:~/roberta_wwm_rmrb/examples/pytorch/token-classification# 
